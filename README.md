@@ -175,3 +175,9 @@ Read [SECURITY.md](SECURITY.md) before exposing write tools to external clients.
 ## Scope
 
 This repository is intentionally narrow. It packages the MCP semantic-memory server and the RWIF runtime it depends on. It does not include the broader research and appliance scaffolding from the original monorepo.
+
+## Related Project
+
+For authoring, validating, diffing, and patching RWIF semantic-memory artifacts, see the companion repo:
+
+[rwif-builder](https://github.com/MoTechnicalities/rwif-builder)
