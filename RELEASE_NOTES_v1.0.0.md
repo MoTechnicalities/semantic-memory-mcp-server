@@ -1,65 +1,34 @@
 # semantic-memory-mcp-server v1.0.0
 
-RWIF turns semantic memory into compact, portable files that stay on disk instead of requiring a separate always-on vector database tier. This first public export release packages that storage model behind an MCP server with federated routing, governed write policy, Docker examples, and published benchmark artifacts.
+First public export release of the RWIF-backed semantic-memory MCP server.
+
+RWIF keeps semantic memory in compact disk-native files and exposes it through one MCP surface, so retrieval can be deployed as a file-and-router problem instead of a heavyweight always-on vector database tier.
 
 ## Highlights
 
-- RWIF-backed MCP semantic-memory server export with a focused public package layout
-- Federated multi-store config with `store_roots`, portable relative paths, and per-store `read-only` or `read-write` access policy
-- MCP tools for semantic retrieval, grounded answers, reasoning, store inspection, and governed proposal workflows
+- RWIF-backed MCP semantic-memory server with a focused standalone export layout
+- Federated multi-store config with portable roots, relative store paths, and per-store `read-only` or `read-write` policy
+- Retrieval, reasoning, store-inspection, and governed proposal tools over one MCP surface
 - Docker, Docker Compose, and Docker Desktop examples for read-only and selectively writable deployments
-- Published benchmark artifacts that cover:
-  - a storage-shaped RWIF vs dense cosine comparison
-  - a small workload-shaped real text array comparison
-  - a larger shipped text-corpus comparison with deterministic text-derived activations
+- Published benchmark artifacts included directly in the repository
 
-## Benchmark Record
+## Benchmark Snapshot
 
-The shipped benchmark record supports these claims:
+- Storage-shaped RWIF vs dense cosine benchmark: `100.0%` top-1 parity, RWIF size ratio `0.547` versus dense float32 and `0.273` versus dense float64
+- Small real text array benchmark: `100.0%` RWIF top-1 accuracy, `100.0%` dense cosine top-1 accuracy, `100.0%` full-ranking agreement
+- Larger shipped text corpus benchmark: `24` records, `12` queries, `100.0%` top-1 parity, mean Spearman rank correlation `0.813`, top-10 overlap `82.5%`
 
-- RWIF retrieval is operational and measurable on the shipped micro-benchmark.
-- RWIF stays in top-1 agreement with dense cosine on the shipped real text-derived array benchmark.
-- RWIF also stays in top-1 agreement with dense cosine on the larger shipped 24-record, 12-query text corpus benchmark, though deeper rankings diverge and are reported explicitly.
-- The repository includes a grounded semantic-memory demo and a broader verifier showcase snapshot from development validation.
+## Release Notes
 
-Key published measurements from the comparative benchmarks:
+- Write access is enforced as a real capability, not a cosmetic flag
+- Stores marked `read-only` reject mutations, and multiple writable stores require explicit targeting
+- Benchmark claims remain conservative and do not claim universal superiority over vector databases or broad latency wins across arbitrary corpora
 
-- Synthetic storage-shaped benchmark:
-  - RWIF top-1 accuracy: `100.0%`
-  - Dense cosine top-1 accuracy: `100.0%`
-  - RWIF size ratio versus dense float32: `0.547`
-  - RWIF size ratio versus dense float64: `0.273`
-- Small real text array benchmark:
-  - RWIF top-1 accuracy: `100.0%`
-  - Dense cosine top-1 accuracy: `100.0%`
-  - Full-ranking agreement rate: `100.0%`
-- Larger shipped text corpus benchmark:
-  - Records: `24`
-  - Queries: `12`
-  - RWIF top-1 accuracy: `100.0%`
-  - Dense cosine top-1 accuracy: `100.0%`
-  - Mean Spearman rank correlation: `0.813`
-  - Top-10 overlap rate: `82.5%`
+## Included In This Release
 
-## Operational Notes
-
-- Write access is enforced as a real local capability. Stores marked `read-only` reject mutations, and multiple writable stores require explicit targeting.
-- The Docker Desktop examples separate read-only mounting from selectively writable mounting so storage policy is visible in deployment configuration rather than hidden in convention.
-- Benchmark claims are intentionally conservative. This release does not claim universal superiority over vector databases or broad latency wins across arbitrary corpora.
-
-## Included Assets
-
-- Standalone source tree under `src/`
+- Source tree under `src/`
 - Focused federation tests under `tests/`
 - Sample configs and sample data under `sample_data/`
-- Benchmark generation scripts under `scripts/`
+- Benchmark scripts under `scripts/`
 - Published benchmark outputs under `benchmark_results/`
-- CI, Docker assets, security guidance, release checklist, and tag notes
-
-## Suggested GitHub Release Title
-
-`semantic-memory-mcp-server v1.0.0`
-
-## Suggested Short Release Summary
-
-First public export release of the RWIF-backed semantic-memory MCP server with federated config, governed write policy, Docker deployment examples, and published comparative benchmark artifacts.
+- CI, Docker assets, security guidance, release checklist, and tag preparation notes
