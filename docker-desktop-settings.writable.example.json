@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "semantic-memory-mcp-server-writable": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "-e",
+        "SEMANTIC_MEMORY_CONFIG=/data/config/demo_federated_memory_config.json",
+        "-e",
+        "DEFAULT_ACTIVE_STORES=repo-demo",
+        "-e",
+        "SEMANTIC_PROVIDER_WARMUP=startup",
+        "-v",
+        "/ABSOLUTE/PATH/TO/configs:/data/config:ro",
+        "-v",
+        "/ABSOLUTE/PATH/TO/stores:/data/stores:rw",
+        "-v",
+        "/ABSOLUTE/PATH/TO/removable:/data/removable:ro",
+        "semantic-memory-mcp-server:latest"
+      ],
+      "description": "Docker Desktop MCP example that keeps the config read-only, mounts the main store root read-write, and allows mutation tools to target read-write stores declared in the config."
+    }
+  }
+}

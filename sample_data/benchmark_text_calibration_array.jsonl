@@ -1,0 +1,4 @@
+{"text":"Paris is a capital city in Europe.","activation":[3.0,0.2,0.1,0.0]}
+{"text":"Two plus one equals three.","activation":[0.1,3.0,0.2,0.0]}
+{"text":"A forest contains trees, soil, and shade.","activation":[0.1,0.2,3.0,0.0]}
+{"text":"This sentence is neutral calibration text.","activation":[1.0,1.0,1.0,0.0]}

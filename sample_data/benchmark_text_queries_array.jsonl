@@ -1,0 +1,3 @@
+{"query_text":"Rome is the capital of Italy.","expected_record_id":"geo-paris","activation":[2.9,0.2,0.1,0.0]}
+{"query_text":"One plus two makes three.","expected_record_id":"math-addition","activation":[0.15,2.9,0.2,0.0]}
+{"query_text":"The river flows between the hills.","expected_record_id":"nature-river","activation":[0.1,0.1,2.85,0.0]}

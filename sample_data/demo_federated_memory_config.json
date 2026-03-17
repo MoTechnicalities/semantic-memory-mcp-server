@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "name": "public demo federated semantic memory",
+    "description": "Sample config for a model-agnostic MCP semantic-memory server.",
+    "intended_use": "Demonstrate always-on and removable semantic stores under one MCP surface."
+  },
+  "store_roots": {
+    "always-on": "/data/stores",
+    "removable": "/data/removable"
+  },
+  "default_provider": {
+    "name": "transformers",
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "layer_index": -1,
+    "pooling": "mean",
+    "device": null,
+    "max_length": 128
+  },
+  "default_active_store_ids": [
+    "repo-demo"
+  ],
+  "stores": [
+    {
+      "store_id": "repo-demo",
+      "label": "Container demo store",
+      "root": "always-on",
+      "relative_path": "demo_readme_semantic_store.rwif",
+      "access_mode": "read-write",
+      "domain_tags": ["demo", "readme", "always-on"],
+      "trust_weight": 1.0,
+      "description": "Always-mounted demo store for container and Docker Desktop examples."
+    },
+    {
+      "store_id": "personal-removable",
+      "label": "Personal removable records",
+      "root": "removable",
+      "relative_path": "personal_records_demo.rwif",
+      "access_mode": "read-only",
+      "domain_tags": ["personal", "private", "removable"],
+      "trust_weight": 1.2,
+      "removable": true,
+      "required_mount_path": "/data/removable",
+      "description": "Example removable-drive store for private personal documents."
+    }
+  ]
+}

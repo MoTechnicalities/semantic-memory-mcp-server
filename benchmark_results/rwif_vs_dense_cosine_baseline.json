@@ -1,0 +1,153 @@
+{
+  "dataset": {
+    "dataset_kind": "synthetic-sparse-spectrum",
+    "record_count": 64,
+    "query_count": 16,
+    "vector_length": 1024,
+    "top_k_waves": 128,
+    "noise_std": 0.0025,
+    "seed": 7
+  },
+  "comparison": {
+    "rwif_compressed_top1_accuracy": 1.0,
+    "cosine_top1_accuracy": 1.0,
+    "agreement_rate": 1.0,
+    "rwif_file_bytes": 143320,
+    "dense_float32_bytes": 262144,
+    "dense_float64_bytes": 524288,
+    "rwif_vs_dense_float32_ratio": 0.546722412109375,
+    "rwif_vs_dense_float64_ratio": 0.2733612060546875,
+    "dense_float32_vs_rwif_ratio": 1.8290817750488417,
+    "dense_float64_vs_rwif_ratio": 3.6581635500976835
+  },
+  "per_query": [
+    {
+      "query_text": "Synthetic query 0 for record-0005",
+      "expected_record_id": "record-0005",
+      "rwif_compressed_top": "record-0005",
+      "cosine_top": "record-0005",
+      "rwif_compressed_score": 0.9999157317577406,
+      "cosine_score": 0.9999810761648035
+    },
+    {
+      "query_text": "Synthetic query 1 for record-0061",
+      "expected_record_id": "record-0061",
+      "rwif_compressed_top": "record-0061",
+      "cosine_top": "record-0061",
+      "rwif_compressed_score": 0.9998928200272139,
+      "cosine_score": 0.9999727728451229
+    },
+    {
+      "query_text": "Synthetic query 2 for record-0053",
+      "expected_record_id": "record-0053",
+      "rwif_compressed_top": "record-0053",
+      "cosine_top": "record-0053",
+      "rwif_compressed_score": 0.9996776350117307,
+      "cosine_score": 0.9999727380911064
+    },
+    {
+      "query_text": "Synthetic query 3 for record-0062",
+      "expected_record_id": "record-0062",
+      "rwif_compressed_top": "record-0062",
+      "cosine_top": "record-0062",
+      "rwif_compressed_score": 0.999881499296252,
+      "cosine_score": 0.9999780138868638
+    },
+    {
+      "query_text": "Synthetic query 4 for record-0013",
+      "expected_record_id": "record-0013",
+      "rwif_compressed_top": "record-0013",
+      "cosine_top": "record-0013",
+      "rwif_compressed_score": 0.999889622963798,
+      "cosine_score": 0.9999744567963113
+    },
+    {
+      "query_text": "Synthetic query 5 for record-0034",
+      "expected_record_id": "record-0034",
+      "rwif_compressed_top": "record-0034",
+      "cosine_top": "record-0034",
+      "rwif_compressed_score": 0.9999125466010075,
+      "cosine_score": 0.9999803417639013
+    },
+    {
+      "query_text": "Synthetic query 6 for record-0038",
+      "expected_record_id": "record-0038",
+      "rwif_compressed_top": "record-0038",
+      "cosine_top": "record-0038",
+      "rwif_compressed_score": 0.9999967061727292,
+      "cosine_score": 0.99997755216439
+    },
+    {
+      "query_text": "Synthetic query 7 for record-0017",
+      "expected_record_id": "record-0017",
+      "rwif_compressed_top": "record-0017",
+      "cosine_top": "record-0017",
+      "rwif_compressed_score": 0.999997143413666,
+      "cosine_score": 0.9999776661602766
+    },
+    {
+      "query_text": "Synthetic query 8 for record-0035",
+      "expected_record_id": "record-0035",
+      "rwif_compressed_top": "record-0035",
+      "cosine_top": "record-0035",
+      "rwif_compressed_score": 0.999996445979716,
+      "cosine_score": 0.9999703537097805
+    },
+    {
+      "query_text": "Synthetic query 9 for record-0039",
+      "expected_record_id": "record-0039",
+      "rwif_compressed_top": "record-0039",
+      "cosine_top": "record-0039",
+      "rwif_compressed_score": 0.9999969752332963,
+      "cosine_score": 0.9999716974685899
+    },
+    {
+      "query_text": "Synthetic query 10 for record-0002",
+      "expected_record_id": "record-0002",
+      "rwif_compressed_top": "record-0002",
+      "cosine_top": "record-0002",
+      "rwif_compressed_score": 0.9997969676031314,
+      "cosine_score": 0.9999725608638219
+    },
+    {
+      "query_text": "Synthetic query 11 for record-0006",
+      "expected_record_id": "record-0006",
+      "rwif_compressed_top": "record-0006",
+      "cosine_top": "record-0006",
+      "rwif_compressed_score": 0.9998880664688071,
+      "cosine_score": 0.9999751180574302
+    },
+    {
+      "query_text": "Synthetic query 12 for record-0009",
+      "expected_record_id": "record-0009",
+      "rwif_compressed_top": "record-0009",
+      "cosine_top": "record-0009",
+      "rwif_compressed_score": 0.9999109317073351,
+      "cosine_score": 0.999976262847402
+    },
+    {
+      "query_text": "Synthetic query 13 for record-0003",
+      "expected_record_id": "record-0003",
+      "rwif_compressed_top": "record-0003",
+      "cosine_top": "record-0003",
+      "rwif_compressed_score": 0.9998892636724939,
+      "cosine_score": 0.9999661522688829
+    },
+    {
+      "query_text": "Synthetic query 14 for record-0019",
+      "expected_record_id": "record-0019",
+      "rwif_compressed_top": "record-0019",
+      "cosine_top": "record-0019",
+      "rwif_compressed_score": 0.9999962188586065,
+      "cosine_score": 0.9999697297742404
+    },
+    {
+      "query_text": "Synthetic query 15 for record-0060",
+      "expected_record_id": "record-0060",
+      "rwif_compressed_top": "record-0060",
+      "cosine_top": "record-0060",
+      "rwif_compressed_score": 0.9998975251468515,
+      "cosine_score": 0.999976486093677
+    }
+  ]
+}

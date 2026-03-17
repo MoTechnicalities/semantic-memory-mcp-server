@@ -1,0 +1,12 @@
+{"query_text":"Which capital city in France is crossed by the Seine?","expected_record_id":"geo-paris"}
+{"query_text":"What city is the capital of Egypt and sits on the Nile River?","expected_record_id":"geo-cairo"}
+{"query_text":"Which router feature keeps a printer on the same local IP address?","expected_record_id":"net-dhcp"}
+{"query_text":"What wireless setting lets visitors use the internet without reaching private home devices?","expected_record_id":"net-guest"}
+{"query_text":"What kind of semantic store may answer queries but must reject writes?","expected_record_id":"rwif-readonly"}
+{"query_text":"What config combines several semantic stores behind one MCP surface?","expected_record_id":"rwif-federated"}
+{"query_text":"How do you run Python's built-in test discovery from the command line?","expected_record_id":"py-unittest"}
+{"query_text":"Which file format keeps one JSON object per line for streaming records?","expected_record_id":"py-jsonl"}
+{"query_text":"What eclipse occurs when Earth's shadow falls across the Moon?","expected_record_id":"astro-eclipse"}
+{"query_text":"Why do comet tails point away from the Sun?","expected_record_id":"astro-comet"}
+{"query_text":"Which herb prefers well-drained soil and moderate watering?","expected_record_id":"garden-rosemary"}
+{"query_text":"What garden covering helps the soil hold moisture and block weeds?","expected_record_id":"garden-mulch"}

@@ -1,0 +1,2310 @@
+{
+  "dataset": {
+    "dataset_kind": "real-text-hashed-corpus",
+    "record_count": 24,
+    "query_count": 12,
+    "calibration_count": 8,
+    "vector_length": 384,
+    "top_k_waves": 96,
+    "rank_depth": 12,
+    "records_path": "sample_data/benchmark_text_large_records.jsonl",
+    "queries_path": "sample_data/benchmark_text_large_queries.jsonl",
+    "calibration_path": "sample_data/benchmark_text_large_calibration.jsonl",
+    "provider_kind": "deterministic-hashed-text"
+  },
+  "summary": {
+    "wave_top1_accuracy": 1.0,
+    "cosine_top1_accuracy": 1.0,
+    "agreement_rate": 1.0,
+    "full_ranking_agreement_rate": 0.0,
+    "mean_spearman_rank_correlation": 0.8128260869565218,
+    "mean_absolute_rank_shift": 2.9722222222222228,
+    "overlap_rates_by_k": {
+      "1": 1.0,
+      "3": 0.75,
+      "5": 0.7333333333333333,
+      "10": 0.8250000000000001
+    },
+    "rwif_file_bytes": 44260,
+    "dense_float32_bytes": 36864,
+    "dense_float64_bytes": 73728,
+    "rwif_vs_dense_float32_ratio": 1.2006293402777777,
+    "rwif_vs_dense_float64_ratio": 0.6003146701388888,
+    "dense_float32_vs_rwif_ratio": 0.8328965205603254,
+    "dense_float64_vs_rwif_ratio": 1.6657930411206507
+  },
+  "per_query": [
+    {
+      "query_text": "Which capital city in France is crossed by the Seine?",
+      "expected_record_id": "geo-paris",
+      "wave_top": "geo-paris",
+      "cosine_top": "geo-paris",
+      "wave_score": 0.3027059340104942,
+      "cosine_score": 0.3929814134823107
+    },
+    {
+      "query_text": "What city is the capital of Egypt and sits on the Nile River?",
+      "expected_record_id": "geo-cairo",
+      "wave_top": "geo-cairo",
+      "cosine_top": "geo-cairo",
+      "wave_score": 0.6415215688780541,
+      "cosine_score": 0.8039179794250684
+    },
+    {
+      "query_text": "Which router feature keeps a printer on the same local IP address?",
+      "expected_record_id": "net-dhcp",
+      "wave_top": "net-dhcp",
+      "cosine_top": "net-dhcp",
+      "wave_score": 0.29885389691756487,
+      "cosine_score": 0.5221012471470728
+    },
+    {
+      "query_text": "What wireless setting lets visitors use the internet without reaching private home devices?",
+      "expected_record_id": "net-guest",
+      "wave_top": "net-guest",
+      "cosine_top": "net-guest",
+      "wave_score": 0.5203202069953089,
+      "cosine_score": 0.6314695056440321
+    },
+    {
+      "query_text": "What kind of semantic store may answer queries but must reject writes?",
+      "expected_record_id": "rwif-readonly",
+      "wave_top": "rwif-readonly",
+      "cosine_top": "rwif-readonly",
+      "wave_score": 0.28556808581093407,
+      "cosine_score": 0.37351875481332764
+    },
+    {
+      "query_text": "What config combines several semantic stores behind one MCP surface?",
+      "expected_record_id": "rwif-federated",
+      "wave_top": "rwif-federated",
+      "cosine_top": "rwif-federated",
+      "wave_score": 0.41981724129233894,
+      "cosine_score": 0.5672638267799536
+    },
+    {
+      "query_text": "How do you run Python's built-in test discovery from the command line?",
+      "expected_record_id": "py-unittest",
+      "wave_top": "py-unittest",
+      "cosine_top": "py-unittest",
+      "wave_score": 0.36590887769650143,
+      "cosine_score": 0.4553481908562578
+    },
+    {
+      "query_text": "Which file format keeps one JSON object per line for streaming records?",
+      "expected_record_id": "py-jsonl",
+      "wave_top": "py-jsonl",
+      "cosine_top": "py-jsonl",
+      "wave_score": 0.40937140732226,
+      "cosine_score": 0.44949848016513116
+    },
+    {
+      "query_text": "What eclipse occurs when Earth's shadow falls across the Moon?",
+      "expected_record_id": "astro-eclipse",
+      "wave_top": "astro-eclipse",
+      "cosine_top": "astro-eclipse",
+      "wave_score": 0.466978963517451,
+      "cosine_score": 0.636492733268782
+    },
+    {
+      "query_text": "Why do comet tails point away from the Sun?",
+      "expected_record_id": "astro-comet",
+      "wave_top": "astro-comet",
+      "cosine_top": "astro-comet",
+      "wave_score": 0.4111677186427383,
+      "cosine_score": 0.5307363015282616
+    },
+    {
+      "query_text": "Which herb prefers well-drained soil and moderate watering?",
+      "expected_record_id": "garden-rosemary",
+      "wave_top": "garden-rosemary",
+      "cosine_top": "garden-rosemary",
+      "wave_score": 0.474548626487426,
+      "cosine_score": 0.6129895170927212
+    },
+    {
+      "query_text": "What garden covering helps the soil hold moisture and block weeds?",
+      "expected_record_id": "garden-mulch",
+      "wave_top": "garden-mulch",
+      "cosine_top": "garden-mulch",
+      "wave_score": 0.37546561543857476,
+      "cosine_score": 0.44953495127280807
+    }
+  ],
+  "ranking_analysis": [
+    {
+      "query_text": "Which capital city in France is crossed by the Seine?",
+      "expected_record_id": "geo-paris",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 0.9191304347826087,
+      "mean_absolute_rank_shift": 2.25,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "geo-paris"
+          ]
+        },
+        "3": {
+          "shared_count": 2,
+          "shared_rate": 0.6666666666666666,
+          "shared_record_ids": [
+            "geo-paris",
+            "geo-cairo"
+          ]
+        },
+        "5": {
+          "shared_count": 3,
+          "shared_rate": 0.6,
+          "shared_record_ids": [
+            "geo-paris",
+            "geo-cairo",
+            "geo-lima"
+          ]
+        },
+        "10": {
+          "shared_count": 9,
+          "shared_rate": 0.9,
+          "shared_record_ids": [
+            "geo-paris",
+            "geo-cairo",
+            "garden-mulch",
+            "geo-lima",
+            "rwif-federated",
+            "astro-eclipse",
+            "geo-tokyo",
+            "net-guest",
+            "net-reboot"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "py-jsonl",
+          "wave_rank": 9,
+          "cosine_rank": 14,
+          "rank_delta": -5
+        },
+        {
+          "record_id": "net-reboot",
+          "wave_rank": 10,
+          "cosine_rank": 5,
+          "rank_delta": 5
+        },
+        {
+          "record_id": "garden-mulch",
+          "wave_rank": 3,
+          "cosine_rank": 8,
+          "rank_delta": -5
+        },
+        {
+          "record_id": "rwif-federated",
+          "wave_rank": 5,
+          "cosine_rank": 9,
+          "rank_delta": -4
+        },
+        {
+          "record_id": "rwif-docker",
+          "wave_rank": 16,
+          "cosine_rank": 12,
+          "rank_delta": 4
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "geo-paris",
+          "score": 0.3027059340104942
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.21265898175891637
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.18138213008286802
+        },
+        {
+          "record_id": "geo-lima",
+          "score": 0.17030453208628446
+        },
+        {
+          "record_id": "rwif-federated",
+          "score": 0.16602911278099058
+        },
+        {
+          "record_id": "astro-eclipse",
+          "score": 0.1570716787934753
+        },
+        {
+          "record_id": "geo-tokyo",
+          "score": 0.15384169608818757
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.15015963404026392
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.14013397562121516
+        },
+        {
+          "record_id": "net-reboot",
+          "score": 0.13185210190935553
+        },
+        {
+          "record_id": "garden-tomato",
+          "score": 0.12917953078860414
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.12801730552762317
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "geo-paris",
+          "score": 0.3929814134823107
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.2932022969785357
+        },
+        {
+          "record_id": "geo-lima",
+          "score": 0.29294297909969397
+        },
+        {
+          "record_id": "astro-eclipse",
+          "score": 0.25504924533935425
+        },
+        {
+          "record_id": "net-reboot",
+          "score": 0.22436662357767334
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.22257979379774165
+        },
+        {
+          "record_id": "geo-tokyo",
+          "score": 0.2175767319922102
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.21232959713250324
+        },
+        {
+          "record_id": "rwif-federated",
+          "score": 0.20166384649591657
+        },
+        {
+          "record_id": "net-dhcp",
+          "score": 0.17463358494547787
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.16829806226256172
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.16410146709930265
+        }
+      ]
+    },
+    {
+      "query_text": "What city is the capital of Egypt and sits on the Nile River?",
+      "expected_record_id": "geo-cairo",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 0.9391304347826087,
+      "mean_absolute_rank_shift": 1.9166666666666667,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "geo-cairo"
+          ]
+        },
+        "3": {
+          "shared_count": 3,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "geo-cairo",
+            "geo-paris",
+            "geo-lima"
+          ]
+        },
+        "5": {
+          "shared_count": 5,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "geo-cairo",
+            "geo-paris",
+            "geo-lima",
+            "astro-eclipse",
+            "geo-tokyo"
+          ]
+        },
+        "10": {
+          "shared_count": 8,
+          "shared_rate": 0.8,
+          "shared_record_ids": [
+            "geo-cairo",
+            "geo-paris",
+            "geo-lima",
+            "astro-eclipse",
+            "geo-tokyo",
+            "garden-mulch",
+            "net-guest",
+            "astro-jupiter"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "astro-comet",
+          "wave_rank": 13,
+          "cosine_rank": 7,
+          "rank_delta": 6
+        },
+        {
+          "record_id": "rwif-docker",
+          "wave_rank": 12,
+          "cosine_rank": 16,
+          "rank_delta": -4
+        },
+        {
+          "record_id": "net-mdns",
+          "wave_rank": 24,
+          "cosine_rank": 20,
+          "rank_delta": 4
+        },
+        {
+          "record_id": "rwif-readonly",
+          "wave_rank": 21,
+          "cosine_rank": 24,
+          "rank_delta": -3
+        },
+        {
+          "record_id": "py-venv",
+          "wave_rank": 15,
+          "cosine_rank": 12,
+          "rank_delta": 3
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "geo-cairo",
+          "score": 0.6415215688780541
+        },
+        {
+          "record_id": "geo-paris",
+          "score": 0.3678466201393499
+        },
+        {
+          "record_id": "geo-lima",
+          "score": 0.30653943912366666
+        },
+        {
+          "record_id": "astro-eclipse",
+          "score": 0.25805816019267835
+        },
+        {
+          "record_id": "geo-tokyo",
+          "score": 0.23397538504690968
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.1506530550354773
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.13415990328236166
+        },
+        {
+          "record_id": "garden-tomato",
+          "score": 0.11403045662406387
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.09725215466536767
+        },
+        {
+          "record_id": "net-reboot",
+          "score": 0.09706856262729148
+        },
+        {
+          "record_id": "py-unittest",
+          "score": 0.094460543623696
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.09377310079144252
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "geo-cairo",
+          "score": 0.8039179794250684
+        },
+        {
+          "record_id": "geo-paris",
+          "score": 0.4868821318068024
+        },
+        {
+          "record_id": "geo-lima",
+          "score": 0.44173686649374877
+        },
+        {
+          "record_id": "geo-tokyo",
+          "score": 0.3346931751035662
+        },
+        {
+          "record_id": "astro-eclipse",
+          "score": 0.268072580927858
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.24072711551220843
+        },
+        {
+          "record_id": "astro-comet",
+          "score": 0.2335272279590815
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.18531836032053933
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.18136340867583267
+        },
+        {
+          "record_id": "py-unittest",
+          "score": 0.17605122155189615
+        },
+        {
+          "record_id": "garden-tomato",
+          "score": 0.17510113323837762
+        },
+        {
+          "record_id": "py-venv",
+          "score": 0.14616533237567536
+        }
+      ]
+    },
+    {
+      "query_text": "Which router feature keeps a printer on the same local IP address?",
+      "expected_record_id": "net-dhcp",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 0.951304347826087,
+      "mean_absolute_rank_shift": 1.5,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "net-dhcp"
+          ]
+        },
+        "3": {
+          "shared_count": 3,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "net-dhcp",
+            "net-reboot",
+            "garden-mulch"
+          ]
+        },
+        "5": {
+          "shared_count": 4,
+          "shared_rate": 0.8,
+          "shared_record_ids": [
+            "net-dhcp",
+            "net-reboot",
+            "garden-mulch",
+            "rwif-disk"
+          ]
+        },
+        "10": {
+          "shared_count": 10,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "net-dhcp",
+            "net-reboot",
+            "garden-mulch",
+            "rwif-disk",
+            "net-guest",
+            "astro-red-giant",
+            "astro-jupiter",
+            "py-venv",
+            "astro-eclipse",
+            "net-mdns"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "net-guest",
+          "wave_rank": 5,
+          "cosine_rank": 10,
+          "rank_delta": -5
+        },
+        {
+          "record_id": "geo-lima",
+          "wave_rank": 18,
+          "cosine_rank": 13,
+          "rank_delta": 5
+        },
+        {
+          "record_id": "garden-rosemary",
+          "wave_rank": 15,
+          "cosine_rank": 19,
+          "rank_delta": -4
+        },
+        {
+          "record_id": "astro-eclipse",
+          "wave_rank": 9,
+          "cosine_rank": 5,
+          "rank_delta": 4
+        },
+        {
+          "record_id": "rwif-federated",
+          "wave_rank": 14,
+          "cosine_rank": 17,
+          "rank_delta": -3
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "net-dhcp",
+          "score": 0.29885389691756487
+        },
+        {
+          "record_id": "net-reboot",
+          "score": 0.21356021685728155
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.14865891265556683
+        },
+        {
+          "record_id": "rwif-disk",
+          "score": 0.13443877587429637
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.12564264053564494
+        },
+        {
+          "record_id": "astro-red-giant",
+          "score": 0.11960583581206666
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.10025626885876242
+        },
+        {
+          "record_id": "py-venv",
+          "score": 0.09018732842929104
+        },
+        {
+          "record_id": "astro-eclipse",
+          "score": 0.07774622549004966
+        },
+        {
+          "record_id": "net-mdns",
+          "score": 0.06931700052619262
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.05380652903528654
+        },
+        {
+          "record_id": "rwif-readonly",
+          "score": 0.04656215870875748
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "net-dhcp",
+          "score": 0.5221012471470728
+        },
+        {
+          "record_id": "net-reboot",
+          "score": 0.2946647897747131
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.21826517890526864
+        },
+        {
+          "record_id": "rwif-disk",
+          "score": 0.19403404409398456
+        },
+        {
+          "record_id": "astro-eclipse",
+          "score": 0.17667516406759964
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.17552142403415674
+        },
+        {
+          "record_id": "astro-red-giant",
+          "score": 0.15783924085585918
+        },
+        {
+          "record_id": "py-venv",
+          "score": 0.15780818987614195
+        },
+        {
+          "record_id": "net-mdns",
+          "score": 0.1554171199949636
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.1492223261990596
+        },
+        {
+          "record_id": "garden-tomato",
+          "score": 0.14916247621306633
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.1291199825972537
+        }
+      ]
+    },
+    {
+      "query_text": "What wireless setting lets visitors use the internet without reaching private home devices?",
+      "expected_record_id": "net-guest",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 0.5834782608695652,
+      "mean_absolute_rank_shift": 4.75,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "net-guest"
+          ]
+        },
+        "3": {
+          "shared_count": 2,
+          "shared_rate": 0.6666666666666666,
+          "shared_record_ids": [
+            "net-guest",
+            "garden-mulch"
+          ]
+        },
+        "5": {
+          "shared_count": 2,
+          "shared_rate": 0.4,
+          "shared_record_ids": [
+            "net-guest",
+            "garden-mulch"
+          ]
+        },
+        "10": {
+          "shared_count": 7,
+          "shared_rate": 0.7,
+          "shared_record_ids": [
+            "net-guest",
+            "garden-mulch",
+            "geo-lima",
+            "geo-paris",
+            "rwif-federated",
+            "astro-comet",
+            "net-mdns"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "rwif-disk",
+          "wave_rank": 8,
+          "cosine_rank": 24,
+          "rank_delta": -16
+        },
+        {
+          "record_id": "rwif-docker",
+          "wave_rank": 4,
+          "cosine_rank": 16,
+          "rank_delta": -12
+        },
+        {
+          "record_id": "geo-tokyo",
+          "wave_rank": 23,
+          "cosine_rank": 11,
+          "rank_delta": 12
+        },
+        {
+          "record_id": "net-reboot",
+          "wave_rank": 3,
+          "cosine_rank": 12,
+          "rank_delta": -9
+        },
+        {
+          "record_id": "geo-cairo",
+          "wave_rank": 12,
+          "cosine_rank": 4,
+          "rank_delta": 8
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "net-guest",
+          "score": 0.5203202069953089
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.18686692231384378
+        },
+        {
+          "record_id": "net-reboot",
+          "score": 0.14389741877163262
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.13294735590787402
+        },
+        {
+          "record_id": "geo-lima",
+          "score": 0.13282690127434632
+        },
+        {
+          "record_id": "geo-paris",
+          "score": 0.1255384556247803
+        },
+        {
+          "record_id": "rwif-federated",
+          "score": 0.11163064847341375
+        },
+        {
+          "record_id": "rwif-disk",
+          "score": 0.1104329128864621
+        },
+        {
+          "record_id": "astro-comet",
+          "score": 0.10285202957989606
+        },
+        {
+          "record_id": "net-mdns",
+          "score": 0.0899590367390684
+        },
+        {
+          "record_id": "py-unittest",
+          "score": 0.08394890424886911
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.07622423425814463
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "net-guest",
+          "score": 0.6314695056440321
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.2498631989320536
+        },
+        {
+          "record_id": "geo-paris",
+          "score": 0.1763717841418908
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.17325783319297247
+        },
+        {
+          "record_id": "astro-comet",
+          "score": 0.1675747053422037
+        },
+        {
+          "record_id": "geo-lima",
+          "score": 0.1482191144193568
+        },
+        {
+          "record_id": "py-venv",
+          "score": 0.1328549246564658
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.13148332259386375
+        },
+        {
+          "record_id": "rwif-federated",
+          "score": 0.1253226868838618
+        },
+        {
+          "record_id": "net-mdns",
+          "score": 0.12068136425431997
+        },
+        {
+          "record_id": "geo-tokyo",
+          "score": 0.11612875263200627
+        },
+        {
+          "record_id": "net-reboot",
+          "score": 0.11224625448510957
+        }
+      ]
+    },
+    {
+      "query_text": "What kind of semantic store may answer queries but must reject writes?",
+      "expected_record_id": "rwif-readonly",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 0.6695652173913044,
+      "mean_absolute_rank_shift": 4.0,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "rwif-readonly"
+          ]
+        },
+        "3": {
+          "shared_count": 2,
+          "shared_rate": 0.6666666666666666,
+          "shared_record_ids": [
+            "rwif-readonly",
+            "rwif-federated"
+          ]
+        },
+        "5": {
+          "shared_count": 4,
+          "shared_rate": 0.8,
+          "shared_record_ids": [
+            "rwif-readonly",
+            "rwif-federated",
+            "garden-compost",
+            "py-unittest"
+          ]
+        },
+        "10": {
+          "shared_count": 8,
+          "shared_rate": 0.8,
+          "shared_record_ids": [
+            "rwif-readonly",
+            "rwif-federated",
+            "garden-compost",
+            "py-unittest",
+            "py-venv",
+            "rwif-docker",
+            "astro-jupiter",
+            "astro-red-giant"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "py-pyproject",
+          "wave_rank": 23,
+          "cosine_rank": 6,
+          "rank_delta": 17
+        },
+        {
+          "record_id": "py-jsonl",
+          "wave_rank": 9,
+          "cosine_rank": 21,
+          "rank_delta": -12
+        },
+        {
+          "record_id": "rwif-disk",
+          "wave_rank": 4,
+          "cosine_rank": 14,
+          "rank_delta": -10
+        },
+        {
+          "record_id": "geo-cairo",
+          "wave_rank": 15,
+          "cosine_rank": 9,
+          "rank_delta": 6
+        },
+        {
+          "record_id": "garden-rosemary",
+          "wave_rank": 17,
+          "cosine_rank": 23,
+          "rank_delta": -6
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "rwif-readonly",
+          "score": 0.28556808581093407
+        },
+        {
+          "record_id": "rwif-federated",
+          "score": 0.17716546833491267
+        },
+        {
+          "record_id": "garden-compost",
+          "score": 0.17628435968524878
+        },
+        {
+          "record_id": "rwif-disk",
+          "score": 0.16866654235046452
+        },
+        {
+          "record_id": "py-unittest",
+          "score": 0.15065230251170636
+        },
+        {
+          "record_id": "py-venv",
+          "score": 0.14805988487540928
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.1328147447525944
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.1310801593496708
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.11546326438213661
+        },
+        {
+          "record_id": "astro-red-giant",
+          "score": 0.09724471179286012
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.09628462269462297
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.09203425067809409
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "rwif-readonly",
+          "score": 0.37351875481332764
+        },
+        {
+          "record_id": "rwif-federated",
+          "score": 0.27972797246600933
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.1915759085059697
+        },
+        {
+          "record_id": "py-unittest",
+          "score": 0.17507580271011883
+        },
+        {
+          "record_id": "garden-compost",
+          "score": 0.16040878180192883
+        },
+        {
+          "record_id": "py-pyproject",
+          "score": 0.15238719146702326
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.13872171780548237
+        },
+        {
+          "record_id": "astro-red-giant",
+          "score": 0.13497389536791327
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.12032515814647651
+        },
+        {
+          "record_id": "py-venv",
+          "score": 0.11653701380667232
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.1143679245855477
+        },
+        {
+          "record_id": "geo-lima",
+          "score": 0.10910938260538829
+        }
+      ]
+    },
+    {
+      "query_text": "What config combines several semantic stores behind one MCP surface?",
+      "expected_record_id": "rwif-federated",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 0.9156521739130434,
+      "mean_absolute_rank_shift": 2.0,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "rwif-federated"
+          ]
+        },
+        "3": {
+          "shared_count": 3,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "rwif-federated",
+            "rwif-docker",
+            "rwif-readonly"
+          ]
+        },
+        "5": {
+          "shared_count": 4,
+          "shared_rate": 0.8,
+          "shared_record_ids": [
+            "rwif-federated",
+            "rwif-docker",
+            "rwif-readonly",
+            "rwif-disk"
+          ]
+        },
+        "10": {
+          "shared_count": 9,
+          "shared_rate": 0.9,
+          "shared_record_ids": [
+            "rwif-federated",
+            "rwif-docker",
+            "rwif-readonly",
+            "py-venv",
+            "rwif-disk",
+            "py-jsonl",
+            "garden-mulch",
+            "garden-rosemary",
+            "garden-compost"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "astro-eclipse",
+          "wave_rank": 12,
+          "cosine_rank": 20,
+          "rank_delta": -8
+        },
+        {
+          "record_id": "net-dhcp",
+          "wave_rank": 10,
+          "cosine_rank": 15,
+          "rank_delta": -5
+        },
+        {
+          "record_id": "astro-jupiter",
+          "wave_rank": 11,
+          "cosine_rank": 6,
+          "rank_delta": 5
+        },
+        {
+          "record_id": "py-venv",
+          "wave_rank": 4,
+          "cosine_rank": 8,
+          "rank_delta": -4
+        },
+        {
+          "record_id": "geo-lima",
+          "wave_rank": 18,
+          "cosine_rank": 14,
+          "rank_delta": 4
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "rwif-federated",
+          "score": 0.41981724129233894
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.22886817032639803
+        },
+        {
+          "record_id": "rwif-readonly",
+          "score": 0.19831143658447214
+        },
+        {
+          "record_id": "py-venv",
+          "score": 0.17262123412299607
+        },
+        {
+          "record_id": "rwif-disk",
+          "score": 0.15972330706664026
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.1582752586051011
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.1446349833280793
+        },
+        {
+          "record_id": "garden-rosemary",
+          "score": 0.14228566143097734
+        },
+        {
+          "record_id": "garden-compost",
+          "score": 0.1277835642374945
+        },
+        {
+          "record_id": "net-dhcp",
+          "score": 0.11372263254691291
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.1135731993527341
+        },
+        {
+          "record_id": "astro-eclipse",
+          "score": 0.11141775618816097
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "rwif-federated",
+          "score": 0.5672638267799536
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.2847474906514778
+        },
+        {
+          "record_id": "rwif-readonly",
+          "score": 0.27621250524155244
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.1833241099038857
+        },
+        {
+          "record_id": "rwif-disk",
+          "score": 0.18080794803944408
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.1687910628134475
+        },
+        {
+          "record_id": "garden-rosemary",
+          "score": 0.16671950103560423
+        },
+        {
+          "record_id": "py-venv",
+          "score": 0.15973789989706738
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.1587434447152696
+        },
+        {
+          "record_id": "garden-compost",
+          "score": 0.15249270484718433
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.14736033954838298
+        },
+        {
+          "record_id": "geo-tokyo",
+          "score": 0.13123170681469767
+        }
+      ]
+    },
+    {
+      "query_text": "How do you run Python's built-in test discovery from the command line?",
+      "expected_record_id": "py-unittest",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 0.7539130434782608,
+      "mean_absolute_rank_shift": 3.8333333333333335,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "py-unittest"
+          ]
+        },
+        "3": {
+          "shared_count": 2,
+          "shared_rate": 0.6666666666666666,
+          "shared_record_ids": [
+            "py-unittest",
+            "garden-mulch"
+          ]
+        },
+        "5": {
+          "shared_count": 2,
+          "shared_rate": 0.4,
+          "shared_record_ids": [
+            "py-unittest",
+            "garden-mulch"
+          ]
+        },
+        "10": {
+          "shared_count": 8,
+          "shared_rate": 0.8,
+          "shared_record_ids": [
+            "py-unittest",
+            "garden-mulch",
+            "py-pyproject",
+            "astro-red-giant",
+            "geo-paris",
+            "py-venv",
+            "net-guest",
+            "geo-cairo"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "net-reboot",
+          "wave_rank": 9,
+          "cosine_rank": 20,
+          "rank_delta": -11
+        },
+        {
+          "record_id": "rwif-readonly",
+          "wave_rank": 16,
+          "cosine_rank": 7,
+          "rank_delta": 9
+        },
+        {
+          "record_id": "rwif-disk",
+          "wave_rank": 18,
+          "cosine_rank": 10,
+          "rank_delta": 8
+        },
+        {
+          "record_id": "net-dhcp",
+          "wave_rank": 20,
+          "cosine_rank": 12,
+          "rank_delta": 8
+        },
+        {
+          "record_id": "py-pyproject",
+          "wave_rank": 3,
+          "cosine_rank": 9,
+          "rank_delta": -6
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "py-unittest",
+          "score": 0.36590887769650143
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.17526382873400217
+        },
+        {
+          "record_id": "py-pyproject",
+          "score": 0.11091872843777505
+        },
+        {
+          "record_id": "astro-red-giant",
+          "score": 0.10345428911104063
+        },
+        {
+          "record_id": "geo-paris",
+          "score": 0.10278642381607957
+        },
+        {
+          "record_id": "py-venv",
+          "score": 0.08977860893441267
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.08956270517417544
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.0887106671808084
+        },
+        {
+          "record_id": "net-reboot",
+          "score": 0.08287249805347956
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.07147618480415674
+        },
+        {
+          "record_id": "garden-compost",
+          "score": 0.06494660935967998
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.059863116456921835
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "py-unittest",
+          "score": 0.4553481908562578
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.1765174658014374
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.14534970635343533
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.13960783861922862
+        },
+        {
+          "record_id": "py-venv",
+          "score": 0.13722112089177815
+        },
+        {
+          "record_id": "astro-red-giant",
+          "score": 0.12247451975638951
+        },
+        {
+          "record_id": "rwif-readonly",
+          "score": 0.12105464483354966
+        },
+        {
+          "record_id": "geo-paris",
+          "score": 0.11046303502671652
+        },
+        {
+          "record_id": "py-pyproject",
+          "score": 0.10728260459636885
+        },
+        {
+          "record_id": "rwif-disk",
+          "score": 0.10680591702893057
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.10345201286067557
+        },
+        {
+          "record_id": "net-dhcp",
+          "score": 0.08992458181061015
+        }
+      ]
+    },
+    {
+      "query_text": "Which file format keeps one JSON object per line for streaming records?",
+      "expected_record_id": "py-jsonl",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 0.8217391304347826,
+      "mean_absolute_rank_shift": 3.0833333333333335,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "py-jsonl"
+          ]
+        },
+        "3": {
+          "shared_count": 2,
+          "shared_rate": 0.6666666666666666,
+          "shared_record_ids": [
+            "py-jsonl",
+            "net-dhcp"
+          ]
+        },
+        "5": {
+          "shared_count": 4,
+          "shared_rate": 0.8,
+          "shared_record_ids": [
+            "py-jsonl",
+            "net-dhcp",
+            "garden-compost",
+            "rwif-disk"
+          ]
+        },
+        "10": {
+          "shared_count": 9,
+          "shared_rate": 0.9,
+          "shared_record_ids": [
+            "py-jsonl",
+            "net-dhcp",
+            "garden-compost",
+            "rwif-disk",
+            "geo-tokyo",
+            "garden-tomato",
+            "rwif-federated",
+            "py-unittest",
+            "astro-jupiter"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "rwif-readonly",
+          "wave_rank": 23,
+          "cosine_rank": 12,
+          "rank_delta": 11
+        },
+        {
+          "record_id": "geo-paris",
+          "wave_rank": 6,
+          "cosine_rank": 15,
+          "rank_delta": -9
+        },
+        {
+          "record_id": "garden-rosemary",
+          "wave_rank": 12,
+          "cosine_rank": 19,
+          "rank_delta": -7
+        },
+        {
+          "record_id": "astro-comet",
+          "wave_rank": 18,
+          "cosine_rank": 24,
+          "rank_delta": -6
+        },
+        {
+          "record_id": "astro-red-giant",
+          "wave_rank": 19,
+          "cosine_rank": 14,
+          "rank_delta": 5
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "py-jsonl",
+          "score": 0.40937140732226
+        },
+        {
+          "record_id": "net-dhcp",
+          "score": 0.21749750042450433
+        },
+        {
+          "record_id": "garden-compost",
+          "score": 0.16995459489912038
+        },
+        {
+          "record_id": "rwif-disk",
+          "score": 0.1699089812940445
+        },
+        {
+          "record_id": "geo-tokyo",
+          "score": 0.1556044217166378
+        },
+        {
+          "record_id": "geo-paris",
+          "score": 0.14109825001837878
+        },
+        {
+          "record_id": "garden-tomato",
+          "score": 0.1321228193398808
+        },
+        {
+          "record_id": "rwif-federated",
+          "score": 0.12980851919182548
+        },
+        {
+          "record_id": "py-unittest",
+          "score": 0.12386414745257124
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.11822248168291717
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.11757271993123733
+        },
+        {
+          "record_id": "garden-rosemary",
+          "score": 0.11092877649601675
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "py-jsonl",
+          "score": 0.44949848016513116
+        },
+        {
+          "record_id": "net-dhcp",
+          "score": 0.25292833769968337
+        },
+        {
+          "record_id": "rwif-disk",
+          "score": 0.22882457501591227
+        },
+        {
+          "record_id": "rwif-federated",
+          "score": 0.21517739457059634
+        },
+        {
+          "record_id": "garden-compost",
+          "score": 0.21165478540487156
+        },
+        {
+          "record_id": "garden-tomato",
+          "score": 0.20482619635040294
+        },
+        {
+          "record_id": "geo-tokyo",
+          "score": 0.1845857857396062
+        },
+        {
+          "record_id": "py-unittest",
+          "score": 0.16728976495068926
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.16422812675615545
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.15569376127921025
+        },
+        {
+          "record_id": "py-venv",
+          "score": 0.1535850648185713
+        },
+        {
+          "record_id": "rwif-readonly",
+          "score": 0.14084329482380745
+        }
+      ]
+    },
+    {
+      "query_text": "What eclipse occurs when Earth's shadow falls across the Moon?",
+      "expected_record_id": "astro-eclipse",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 0.811304347826087,
+      "mean_absolute_rank_shift": 3.25,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "astro-eclipse"
+          ]
+        },
+        "3": {
+          "shared_count": 2,
+          "shared_rate": 0.6666666666666666,
+          "shared_record_ids": [
+            "astro-eclipse",
+            "astro-jupiter"
+          ]
+        },
+        "5": {
+          "shared_count": 4,
+          "shared_rate": 0.8,
+          "shared_record_ids": [
+            "astro-eclipse",
+            "astro-jupiter",
+            "net-dhcp",
+            "geo-cairo"
+          ]
+        },
+        "10": {
+          "shared_count": 8,
+          "shared_rate": 0.8,
+          "shared_record_ids": [
+            "astro-eclipse",
+            "astro-jupiter",
+            "garden-mulch",
+            "net-dhcp",
+            "geo-cairo",
+            "net-reboot",
+            "geo-paris",
+            "net-guest"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "geo-tokyo",
+          "wave_rank": 12,
+          "cosine_rank": 21,
+          "rank_delta": -9
+        },
+        {
+          "record_id": "py-venv",
+          "wave_rank": 20,
+          "cosine_rank": 12,
+          "rank_delta": 8
+        },
+        {
+          "record_id": "geo-lima",
+          "wave_rank": 18,
+          "cosine_rank": 10,
+          "rank_delta": 8
+        },
+        {
+          "record_id": "astro-comet",
+          "wave_rank": 6,
+          "cosine_rank": 13,
+          "rank_delta": -7
+        },
+        {
+          "record_id": "rwif-docker",
+          "wave_rank": 9,
+          "cosine_rank": 15,
+          "rank_delta": -6
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "astro-eclipse",
+          "score": 0.466978963517451
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.1965475182416477
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.1442804328850954
+        },
+        {
+          "record_id": "net-dhcp",
+          "score": 0.1424563072189308
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.1329726086381767
+        },
+        {
+          "record_id": "astro-comet",
+          "score": 0.1299247378112814
+        },
+        {
+          "record_id": "net-reboot",
+          "score": 0.12878329606370964
+        },
+        {
+          "record_id": "geo-paris",
+          "score": 0.12210959711407184
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.11156971088975597
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.11152467724754063
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.10305156959082004
+        },
+        {
+          "record_id": "geo-tokyo",
+          "score": 0.09739179542725997
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "astro-eclipse",
+          "score": 0.636492733268782
+        },
+        {
+          "record_id": "net-dhcp",
+          "score": 0.19065606228651988
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.17281290054363774
+        },
+        {
+          "record_id": "geo-paris",
+          "score": 0.14918001149223545
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.13520336922832463
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.13434622844212513
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.13347684661581544
+        },
+        {
+          "record_id": "net-reboot",
+          "score": 0.13091926707396226
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.13037492387430735
+        },
+        {
+          "record_id": "geo-lima",
+          "score": 0.11956358679075559
+        },
+        {
+          "record_id": "garden-tomato",
+          "score": 0.11651644734934294
+        },
+        {
+          "record_id": "py-venv",
+          "score": 0.1126169621533814
+        }
+      ]
+    },
+    {
+      "query_text": "Why do comet tails point away from the Sun?",
+      "expected_record_id": "astro-comet",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 0.7321739130434783,
+      "mean_absolute_rank_shift": 3.6666666666666665,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "astro-comet"
+          ]
+        },
+        "3": {
+          "shared_count": 2,
+          "shared_rate": 0.6666666666666666,
+          "shared_record_ids": [
+            "astro-comet",
+            "geo-paris"
+          ]
+        },
+        "5": {
+          "shared_count": 4,
+          "shared_rate": 0.8,
+          "shared_record_ids": [
+            "astro-comet",
+            "astro-eclipse",
+            "geo-paris",
+            "garden-mulch"
+          ]
+        },
+        "10": {
+          "shared_count": 8,
+          "shared_rate": 0.8,
+          "shared_record_ids": [
+            "astro-comet",
+            "astro-eclipse",
+            "geo-paris",
+            "geo-cairo",
+            "garden-mulch",
+            "net-dhcp",
+            "garden-tomato",
+            "net-guest"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "py-unittest",
+          "wave_rank": 9,
+          "cosine_rank": 22,
+          "rank_delta": -13
+        },
+        {
+          "record_id": "astro-jupiter",
+          "wave_rank": 22,
+          "cosine_rank": 11,
+          "rank_delta": 11
+        },
+        {
+          "record_id": "net-reboot",
+          "wave_rank": 17,
+          "cosine_rank": 9,
+          "rank_delta": 8
+        },
+        {
+          "record_id": "net-mdns",
+          "wave_rank": 10,
+          "cosine_rank": 18,
+          "rank_delta": -8
+        },
+        {
+          "record_id": "rwif-docker",
+          "wave_rank": 16,
+          "cosine_rank": 10,
+          "rank_delta": 6
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "astro-comet",
+          "score": 0.4111677186427383
+        },
+        {
+          "record_id": "astro-eclipse",
+          "score": 0.21828568071615637
+        },
+        {
+          "record_id": "geo-paris",
+          "score": 0.20842874839984993
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.16206689930494808
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.14523721798003808
+        },
+        {
+          "record_id": "net-dhcp",
+          "score": 0.13896016651066537
+        },
+        {
+          "record_id": "garden-tomato",
+          "score": 0.11561295132737058
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.10147980182425961
+        },
+        {
+          "record_id": "py-unittest",
+          "score": 0.10045439763753143
+        },
+        {
+          "record_id": "net-mdns",
+          "score": 0.08135521284971493
+        },
+        {
+          "record_id": "geo-lima",
+          "score": 0.08058597988841086
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.07928814270252894
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "astro-comet",
+          "score": 0.5307363015282616
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.24838336718331985
+        },
+        {
+          "record_id": "geo-paris",
+          "score": 0.2321772382241392
+        },
+        {
+          "record_id": "astro-eclipse",
+          "score": 0.231759559140687
+        },
+        {
+          "record_id": "garden-tomato",
+          "score": 0.19121928622819365
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.18944646393958062
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.18663647692913352
+        },
+        {
+          "record_id": "net-dhcp",
+          "score": 0.18264067232935896
+        },
+        {
+          "record_id": "net-reboot",
+          "score": 0.14255376933777716
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.10971254326175608
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.10654705040829446
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.10645809263898633
+        }
+      ]
+    },
+    {
+      "query_text": "Which herb prefers well-drained soil and moderate watering?",
+      "expected_record_id": "garden-rosemary",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 0.8504347826086956,
+      "mean_absolute_rank_shift": 2.5833333333333335,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "garden-rosemary"
+          ]
+        },
+        "3": {
+          "shared_count": 2,
+          "shared_rate": 0.6666666666666666,
+          "shared_record_ids": [
+            "garden-rosemary",
+            "garden-compost"
+          ]
+        },
+        "5": {
+          "shared_count": 5,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "garden-rosemary",
+            "rwif-federated",
+            "garden-compost",
+            "garden-mulch",
+            "garden-tomato"
+          ]
+        },
+        "10": {
+          "shared_count": 8,
+          "shared_rate": 0.8,
+          "shared_record_ids": [
+            "garden-rosemary",
+            "rwif-federated",
+            "garden-compost",
+            "garden-mulch",
+            "garden-tomato",
+            "astro-jupiter",
+            "rwif-disk",
+            "astro-comet"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "py-unittest",
+          "wave_rank": 20,
+          "cosine_rank": 9,
+          "rank_delta": 11
+        },
+        {
+          "record_id": "net-dhcp",
+          "wave_rank": 14,
+          "cosine_rank": 21,
+          "rank_delta": -7
+        },
+        {
+          "record_id": "geo-tokyo",
+          "wave_rank": 15,
+          "cosine_rank": 8,
+          "rank_delta": 7
+        },
+        {
+          "record_id": "geo-cairo",
+          "wave_rank": 8,
+          "cosine_rank": 14,
+          "rank_delta": -6
+        },
+        {
+          "record_id": "py-pyproject",
+          "wave_rank": 21,
+          "cosine_rank": 16,
+          "rank_delta": 5
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "garden-rosemary",
+          "score": 0.474548626487426
+        },
+        {
+          "record_id": "rwif-federated",
+          "score": 0.2135356790436232
+        },
+        {
+          "record_id": "garden-compost",
+          "score": 0.20870581424594514
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.18805889251233598
+        },
+        {
+          "record_id": "garden-tomato",
+          "score": 0.17397770487928502
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.13079721159539417
+        },
+        {
+          "record_id": "rwif-disk",
+          "score": 0.13003105409397409
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.11731763779786113
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.10462798052433124
+        },
+        {
+          "record_id": "astro-comet",
+          "score": 0.10112864358858922
+        },
+        {
+          "record_id": "rwif-readonly",
+          "score": 0.08325501056783136
+        },
+        {
+          "record_id": "net-mdns",
+          "score": 0.06815098319242198
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "garden-rosemary",
+          "score": 0.6129895170927212
+        },
+        {
+          "record_id": "garden-compost",
+          "score": 0.28911592948377157
+        },
+        {
+          "record_id": "garden-mulch",
+          "score": 0.23789939460381426
+        },
+        {
+          "record_id": "rwif-federated",
+          "score": 0.19698856257788175
+        },
+        {
+          "record_id": "garden-tomato",
+          "score": 0.17895942514361715
+        },
+        {
+          "record_id": "rwif-disk",
+          "score": 0.12775737872975215
+        },
+        {
+          "record_id": "astro-jupiter",
+          "score": 0.12257108712229364
+        },
+        {
+          "record_id": "geo-tokyo",
+          "score": 0.10667019666248412
+        },
+        {
+          "record_id": "py-unittest",
+          "score": 0.10627388489770827
+        },
+        {
+          "record_id": "astro-comet",
+          "score": 0.09341688563428438
+        },
+        {
+          "record_id": "net-mdns",
+          "score": 0.08884516455297352
+        },
+        {
+          "record_id": "rwif-readonly",
+          "score": 0.08169335363720666
+        }
+      ]
+    },
+    {
+      "query_text": "What garden covering helps the soil hold moisture and block weeds?",
+      "expected_record_id": "garden-mulch",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 0.8060869565217391,
+      "mean_absolute_rank_shift": 2.8333333333333335,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "garden-mulch"
+          ]
+        },
+        "3": {
+          "shared_count": 2,
+          "shared_rate": 0.6666666666666666,
+          "shared_record_ids": [
+            "garden-mulch",
+            "net-dhcp"
+          ]
+        },
+        "5": {
+          "shared_count": 3,
+          "shared_rate": 0.6,
+          "shared_record_ids": [
+            "garden-mulch",
+            "net-dhcp",
+            "net-guest"
+          ]
+        },
+        "10": {
+          "shared_count": 7,
+          "shared_rate": 0.7,
+          "shared_record_ids": [
+            "garden-mulch",
+            "astro-eclipse",
+            "net-dhcp",
+            "net-guest",
+            "rwif-docker",
+            "geo-cairo",
+            "garden-compost"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "garden-tomato",
+          "wave_rank": 17,
+          "cosine_rank": 3,
+          "rank_delta": 14
+        },
+        {
+          "record_id": "py-venv",
+          "wave_rank": 7,
+          "cosine_rank": 16,
+          "rank_delta": -9
+        },
+        {
+          "record_id": "rwif-readonly",
+          "wave_rank": 12,
+          "cosine_rank": 19,
+          "rank_delta": -7
+        },
+        {
+          "record_id": "geo-tokyo",
+          "wave_rank": 14,
+          "cosine_rank": 8,
+          "rank_delta": 6
+        },
+        {
+          "record_id": "rwif-docker",
+          "wave_rank": 5,
+          "cosine_rank": 9,
+          "rank_delta": -4
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "garden-mulch",
+          "score": 0.37546561543857476
+        },
+        {
+          "record_id": "astro-eclipse",
+          "score": 0.20873803826453202
+        },
+        {
+          "record_id": "net-dhcp",
+          "score": 0.17362053531500743
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.14364795602497527
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.1345771883150141
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.13248928432026846
+        },
+        {
+          "record_id": "py-venv",
+          "score": 0.12682401967827095
+        },
+        {
+          "record_id": "garden-compost",
+          "score": 0.12504747324181448
+        },
+        {
+          "record_id": "geo-paris",
+          "score": 0.11931962604672429
+        },
+        {
+          "record_id": "geo-lima",
+          "score": 0.11914697221323228
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.11149624056704663
+        },
+        {
+          "record_id": "rwif-readonly",
+          "score": 0.11115073090064283
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "garden-mulch",
+          "score": 0.44953495127280807
+        },
+        {
+          "record_id": "net-dhcp",
+          "score": 0.19013547785682733
+        },
+        {
+          "record_id": "garden-tomato",
+          "score": 0.18596650817205468
+        },
+        {
+          "record_id": "garden-compost",
+          "score": 0.18346593544164694
+        },
+        {
+          "record_id": "net-guest",
+          "score": 0.17053956730686526
+        },
+        {
+          "record_id": "astro-eclipse",
+          "score": 0.16529810534901435
+        },
+        {
+          "record_id": "geo-cairo",
+          "score": 0.160275098740166
+        },
+        {
+          "record_id": "geo-tokyo",
+          "score": 0.14529893569154853
+        },
+        {
+          "record_id": "rwif-docker",
+          "score": 0.13601853667581892
+        },
+        {
+          "record_id": "py-jsonl",
+          "score": 0.1330721895450792
+        },
+        {
+          "record_id": "geo-paris",
+          "score": 0.13192884339319783
+        },
+        {
+          "record_id": "geo-lima",
+          "score": 0.13024139377955635
+        }
+      ]
+    }
+  ]
+}

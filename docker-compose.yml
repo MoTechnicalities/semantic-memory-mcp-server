@@ -1,0 +1,14 @@
+services:
+  semantic-memory-mcp:
+    build: .
+    image: semantic-memory-mcp-server:latest
+    stdin_open: true
+    tty: true
+    environment:
+      SEMANTIC_MEMORY_CONFIG: /data/config/demo_federated_memory_config.json
+      DEFAULT_ACTIVE_STORES: repo-demo
+      SEMANTIC_PROVIDER_WARMUP: startup
+    volumes:
+      - ./sample_data:/data/config:ro
+      - ./sample_data:/data/stores:ro
+      - ./sample_data:/data/removable:ro

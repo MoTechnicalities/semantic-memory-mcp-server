@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semantic-memory-mcp-server"
+version = "1.0.0"
+description = "RWIF-backed federated semantic memory over MCP"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.0",
+]
+
+[project.optional-dependencies]
+runtime = [
+    "torch>=2.4",
+    "transformers>=4.49",
+]
+test = [
+    "numpy>=2.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

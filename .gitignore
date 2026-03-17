@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+.venv/
+build/
+dist/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.tmp
+*.rwif.proposals.json
+*.rwif.proposal-events.jsonl

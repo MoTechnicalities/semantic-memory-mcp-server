@@ -1,0 +1,419 @@
+{
+  "dataset": {
+    "dataset_kind": "real-text-array",
+    "record_count": 6,
+    "query_count": 3,
+    "calibration_count": 4,
+    "vector_length": 4,
+    "top_k_waves": 4,
+    "rank_depth": 6,
+    "records_path": "sample_data/benchmark_text_records_array.jsonl",
+    "queries_path": "sample_data/benchmark_text_queries_array.jsonl",
+    "calibration_path": "sample_data/benchmark_text_calibration_array.jsonl"
+  },
+  "summary": {
+    "wave_top1_accuracy": 1.0,
+    "cosine_top1_accuracy": 1.0,
+    "agreement_rate": 1.0,
+    "full_ranking_agreement_rate": 1.0,
+    "mean_spearman_rank_correlation": 1.0,
+    "mean_absolute_rank_shift": 0.0,
+    "overlap_rates_by_k": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "rwif_file_bytes": 2433
+  },
+  "per_query": [
+    {
+      "query_text": "Rome is the capital of Italy.",
+      "expected_record_id": "geo-paris",
+      "wave_top": "geo-paris",
+      "cosine_top": "geo-paris",
+      "wave_score": 0.999694653688834,
+      "cosine_score": 0.9996946536888341
+    },
+    {
+      "query_text": "One plus two makes three.",
+      "expected_record_id": "math-addition",
+      "wave_top": "math-addition",
+      "cosine_top": "math-addition",
+      "wave_score": 0.999811719788195,
+      "cosine_score": 0.9998117197881953
+    },
+    {
+      "query_text": "The river flows between the hills.",
+      "expected_record_id": "nature-river",
+      "wave_top": "nature-river",
+      "cosine_top": "nature-river",
+      "wave_score": 0.9999035188073718,
+      "cosine_score": 0.9999035188073718
+    }
+  ],
+  "ranking_analysis": [
+    {
+      "query_text": "Rome is the capital of Italy.",
+      "expected_record_id": "geo-paris",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 1.0,
+      "mean_absolute_rank_shift": 0.0,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "geo-paris"
+          ]
+        },
+        "3": {
+          "shared_count": 3,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "geo-paris",
+            "geo-london",
+            "math-equation"
+          ]
+        },
+        "5": {
+          "shared_count": 5,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "geo-paris",
+            "geo-london",
+            "math-equation",
+            "math-addition",
+            "nature-river"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "nature-river",
+          "wave_rank": 5,
+          "cosine_rank": 5,
+          "rank_delta": 0
+        },
+        {
+          "record_id": "nature-forest",
+          "wave_rank": 6,
+          "cosine_rank": 6,
+          "rank_delta": 0
+        },
+        {
+          "record_id": "math-equation",
+          "wave_rank": 3,
+          "cosine_rank": 3,
+          "rank_delta": 0
+        },
+        {
+          "record_id": "math-addition",
+          "wave_rank": 4,
+          "cosine_rank": 4,
+          "rank_delta": 0
+        },
+        {
+          "record_id": "geo-paris",
+          "wave_rank": 1,
+          "cosine_rank": 1,
+          "rank_delta": 0
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "geo-paris",
+          "score": 0.999694653688834
+        },
+        {
+          "record_id": "geo-london",
+          "score": 0.9991127916789583
+        },
+        {
+          "record_id": "math-equation",
+          "score": -0.44018571542716445
+        },
+        {
+          "record_id": "math-addition",
+          "score": -0.49984137774413884
+        },
+        {
+          "record_id": "nature-river",
+          "score": -0.5050153002138127
+        },
+        {
+          "record_id": "nature-forest",
+          "score": -0.5329690712099562
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "geo-paris",
+          "score": 0.9996946536888341
+        },
+        {
+          "record_id": "geo-london",
+          "score": 0.9991127916789585
+        },
+        {
+          "record_id": "math-equation",
+          "score": -0.4401857154271642
+        },
+        {
+          "record_id": "math-addition",
+          "score": -0.49984137774413867
+        },
+        {
+          "record_id": "nature-river",
+          "score": -0.5050153002138126
+        },
+        {
+          "record_id": "nature-forest",
+          "score": -0.5329690712099563
+        }
+      ]
+    },
+    {
+      "query_text": "One plus two makes three.",
+      "expected_record_id": "math-addition",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 1.0,
+      "mean_absolute_rank_shift": 0.0,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "math-addition"
+          ]
+        },
+        "3": {
+          "shared_count": 3,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "math-addition",
+            "math-equation",
+            "nature-forest"
+          ]
+        },
+        "5": {
+          "shared_count": 5,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "math-addition",
+            "math-equation",
+            "nature-forest",
+            "geo-paris",
+            "geo-london"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "nature-river",
+          "wave_rank": 6,
+          "cosine_rank": 6,
+          "rank_delta": 0
+        },
+        {
+          "record_id": "nature-forest",
+          "wave_rank": 3,
+          "cosine_rank": 3,
+          "rank_delta": 0
+        },
+        {
+          "record_id": "math-equation",
+          "wave_rank": 2,
+          "cosine_rank": 2,
+          "rank_delta": 0
+        },
+        {
+          "record_id": "math-addition",
+          "wave_rank": 1,
+          "cosine_rank": 1,
+          "rank_delta": 0
+        },
+        {
+          "record_id": "geo-paris",
+          "wave_rank": 4,
+          "cosine_rank": 4,
+          "rank_delta": 0
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "math-addition",
+          "score": 0.999811719788195
+        },
+        {
+          "record_id": "math-equation",
+          "score": 0.9962644725301982
+        },
+        {
+          "record_id": "nature-forest",
+          "score": -0.47951747691720653
+        },
+        {
+          "record_id": "geo-paris",
+          "score": -0.48723425864024145
+        },
+        {
+          "record_id": "geo-london",
+          "score": -0.49983371361789397
+        },
+        {
+          "record_id": "nature-river",
+          "score": -0.5063935041340373
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "math-addition",
+          "score": 0.9998117197881953
+        },
+        {
+          "record_id": "math-equation",
+          "score": 0.9962644725301983
+        },
+        {
+          "record_id": "nature-forest",
+          "score": -0.47951747691720675
+        },
+        {
+          "record_id": "geo-paris",
+          "score": -0.48723425864024134
+        },
+        {
+          "record_id": "geo-london",
+          "score": -0.49983371361789397
+        },
+        {
+          "record_id": "nature-river",
+          "score": -0.5063935041340375
+        }
+      ]
+    },
+    {
+      "query_text": "The river flows between the hills.",
+      "expected_record_id": "nature-river",
+      "expected_wave_rank": 1,
+      "expected_cosine_rank": 1,
+      "spearman_rank_correlation": 1.0,
+      "mean_absolute_rank_shift": 0.0,
+      "overlap_at_k": {
+        "1": {
+          "shared_count": 1,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "nature-river"
+          ]
+        },
+        "3": {
+          "shared_count": 3,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "nature-river",
+            "nature-forest",
+            "geo-london"
+          ]
+        },
+        "5": {
+          "shared_count": 5,
+          "shared_rate": 1.0,
+          "shared_record_ids": [
+            "nature-river",
+            "nature-forest",
+            "geo-london",
+            "math-addition",
+            "geo-paris"
+          ]
+        }
+      },
+      "largest_rank_shifts": [
+        {
+          "record_id": "nature-river",
+          "wave_rank": 1,
+          "cosine_rank": 1,
+          "rank_delta": 0
+        },
+        {
+          "record_id": "nature-forest",
+          "wave_rank": 2,
+          "cosine_rank": 2,
+          "rank_delta": 0
+        },
+        {
+          "record_id": "math-equation",
+          "wave_rank": 6,
+          "cosine_rank": 6,
+          "rank_delta": 0
+        },
+        {
+          "record_id": "math-addition",
+          "wave_rank": 4,
+          "cosine_rank": 4,
+          "rank_delta": 0
+        },
+        {
+          "record_id": "geo-paris",
+          "wave_rank": 5,
+          "cosine_rank": 5,
+          "rank_delta": 0
+        }
+      ],
+      "wave_ranking": [
+        {
+          "record_id": "nature-river",
+          "score": 0.9999035188073718
+        },
+        {
+          "record_id": "nature-forest",
+          "score": 0.9975024477995988
+        },
+        {
+          "record_id": "geo-london",
+          "score": -0.490203372552938
+        },
+        {
+          "record_id": "math-addition",
+          "score": -0.49388604565262684
+        },
+        {
+          "record_id": "geo-paris",
+          "score": -0.5060593762251453
+        },
+        {
+          "record_id": "math-equation",
+          "score": -0.5455420099991752
+        }
+      ],
+      "cosine_ranking": [
+        {
+          "record_id": "nature-river",
+          "score": 0.9999035188073718
+        },
+        {
+          "record_id": "nature-forest",
+          "score": 0.9975024477995991
+        },
+        {
+          "record_id": "geo-london",
+          "score": -0.4902033725529379
+        },
+        {
+          "record_id": "math-addition",
+          "score": -0.493886045652627
+        },
+        {
+          "record_id": "geo-paris",
+          "score": -0.5060593762251451
+        },
+        {
+          "record_id": "math-equation",
+          "score": -0.5455420099991753
+        }
+      ]
+    }
+  ]
+}
