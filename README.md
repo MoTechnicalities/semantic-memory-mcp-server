@@ -1,6 +1,6 @@
 # Semantic Memory MCP Server
 
-RWIF turns semantic memory into compact, portable files that can stay on disk instead of forcing a heavyweight vector database to stay resident in RAM or VRAM. This repository exposes that disk-native memory through a clean MCP server, so models and agents can retrieve grounded semantic evidence from RWIF files on SSDs, removable media, or mixed storage tiers without introducing a separate database platform.
+RWIF, short for Resonant Wave Information Format, turns semantic memory into compact, portable files that can stay on disk instead of forcing a heavyweight vector database to stay resident in RAM or VRAM. This repository exposes that disk-native memory through a clean MCP server, so models and agents can retrieve grounded semantic evidence from RWIF files on SSDs, removable media, or mixed storage tiers without introducing a separate database platform.
 
 The practical implication is straightforward: semantic retrieval becomes a file-and-router problem rather than a cluster-and-index problem. You can keep always-on knowledge on local SSD, mount private knowledge only when needed, and publish one stable MCP surface over all of it.
 
